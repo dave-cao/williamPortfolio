@@ -1,0 +1,445 @@
+/*Variable*/
+:root {
+  --primary: #2ebdbd; /*accents*/
+  --secondary: white; /*background colour*/
+  --third: black; /*text colours and 20%*/
+  --fourth: #537c8e; /*darker accent*/
+  --fifth: #E1D9D1; /*darker background*/
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nanum Myeongjo";
+  scroll-behavior: smooth;
+}
+html {
+  position: relative;
+  background-color: var(--secondary);
+  color: var(--third);
+  z-index: -2;
+}
+
+/* base styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+}
+/* Mobile styles */
+/* opacity: 0;
+  position: absolute;
+  display: none;
+  background: var(--secondary); */
+
+.navBar li {
+  list-style: none;
+}
+li a {
+  color: var(--third);
+  text-decoration: none;
+  transition: ease-in 0.2s;
+}
+li a:hover {
+  color: var(--primary);
+}
+a {
+  text-decoration: none;
+  color: var(--third);
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background: var(--third);
+  margin: 5px;
+}
+.hamburger {
+  position: fixed;
+  margin-top: 20px;
+  cursor: pointer;
+  right: 5%;
+  z-index: 4;
+}
+.name {
+  position: fixed;
+  color: var(--primary);
+  width: 8em;
+  font-size: 1.5em;
+  margin: 20px 20px;
+  animation: name 5s ease-in-out reverse;
+  cursor: pointer;
+  font-family: "Fredericka the Great", cursive;
+  z-index: 4;
+}
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+  z-index: -3;
+  transition: all 2s ease-out;
+}
+.navBar.under {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+  transition: all 1s ease-out;
+}
+
+.nav_links_container {
+  position: relative;
+  z-index: -2;
+  background-color: var(--fifth);
+  height: 100vh;
+  width: 100%;
+  grid-column: 1/9;
+  align-items: center;
+  justify-items: center;
+  align-items: center;
+  clip-path: circle(100px at 105% -15%);
+  -webkit-clip-path: circle(100px at 105% -15%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+.nav_links_container.open {
+  position: relative;
+  z-index: 3;
+  clip-path: circle(1250px at 90% -10%);
+  -webkit-clip-path: circle(1250px at 90% -10%);
+  pointer-events: all;
+}
+
+.nav_links_container li:nth-child(1) {
+  grid-column: 1/9;
+}
+.nav_links_container li:nth-child(2) {
+  grid-column: 1/9;
+}
+.nav_links_container li:nth-child(3) {
+  grid-column: 1/9;
+}
+
+.contactButton {
+  border: none;
+  grid-column: 1/9;
+  justify-self: center;
+  height: 3em;
+  width: 10em;
+  /* margin: 10px 10px; */
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+}
+.contactButton a {
+  color: var(--third);
+}
+.contactButton:hover {
+  color: var(--secondary);
+  background-color: var(--fourth);
+}
+
+.bold {
+  color: var(--primary);
+}
+.hiddenLinks:hover {
+  color: lightskyblue;
+}
+
+@media screen and (min-width: 760px) {
+  .navBar {
+    position: absolute;
+    width: 100%;
+    color: var(--third);
+    display: grid;
+    background-color: var(--secondary);
+    justify-items: center;
+    align-self: center;
+   z-index: 2;
+  }
+  .navBar.under {
+    position: absolute;
+    z-index: 1;
+  }
+  .hamburger {
+    display: none;
+  }
+  .nav_links_container {
+    height: 60px;
+    grid-column: 1/9;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    clip-path: none;
+    transition: all 1s ease-out;
+    pointer-events: all;
+  }
+  .nav_links_container.open {
+    clip-path: none;
+  }
+
+  .nav_links_container li:nth-child(1) {
+    grid-column: 3/4;
+  }
+  .nav_links_container li:nth-child(2) {
+    grid-column: 4/6;
+  }
+  .nav_links_container li:nth-child(3) {
+    grid-column: 6/7;
+  }
+
+  .contactButton {
+    grid-column: 8/9;
+    margin-right: 15px;
+  }
+
+  
+}
+
+/*Testing*/
+
+section {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3rem;
+}
+section h1 {
+  color: var(--primary)
+}
+
+
+
+/*reset*/
+/* * {
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background-color: #2c2f33;
+  scroll-behavior: smooth;
+  color: #edf0f1;
+  font-family: "Snippet", sans-serif;
+} */
+/*base styles*/
+
+/*Nav bar*/
+/* header {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5%;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #23272a;
+}
+
+.navBar {
+  display: none;
+  position: fixed;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+  z-index: -1;
+  transition: all 2s ease-out;
+}
+.navBar.under {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+  transition: all 1s ease-out;
+}
+.nav_links {
+  display: none;
+  list-style: none;
+  background-color: #23272a;
+  position: relative;
+  z-index: -2;
+  background-color: var(--secondary);
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  align-items: center;
+  clip-path: circle(100px at 105% -15%);
+  -webkit-clip-path: circle(100px at 105% -15%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+.nav_links.open {
+  position: relative;
+  z-index: 3;
+  clip-path: circle(1250px at 90% -10%);
+  -webkit-clip-path: circle(1250px at 90% -10%);
+  pointer-events: all;
+}
+
+li,
+#cta {
+  font-family: "Snippet", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #23272a;
+  text-decoration: none;
+}
+.navButton {
+  font-family: "Snippet", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  background-color: #23272a;
+}
+
+.logo {
+  display: none;
+  width: 10rem;
+  height: 5rem;
+  cursor: pointer;
+  margin-right: auto;
+  background-color: #23272a;
+}
+
+.logoTitle {
+  margin-top: 25px;
+  margin-right: auto;
+  color: gold;
+  font-family: "Fredericka the Great", cursive;
+  background-color: #23272a;
+  width: 170px;
+}
+
+.nav_links li {
+  height: 20vh;
+  display: flex;
+  padding: 0px 10px;
+  justify-content: space-around;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: goldenrod;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: #23272a;
+}
+
+button:hover {
+  background-color: gold;
+} */
+
+/* small tablet sizes */
+@media screen and (min-width: 600px) {
+}
+/*Laptop*/
+@media screen and (min-width: 820px) {
+  /*Nav bar*/
+  /* header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #23272a;
+    position: fixed;
+
+    width: 100%;
+  }
+
+  li,
+  #cta {
+    font-family: "Snippet", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #23272a;
+    text-decoration: none;
+  }
+  .navButton {
+    font-family: "Snippet", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    display: block;
+    width: 10rem;
+    height: 5rem;
+    cursor: pointer;
+    margin-right: auto;
+    background-color: #23272a;
+  }
+
+  .logoTitle {
+    margin-top: 25px;
+    margin-right: auto;
+    color: gold;
+    font-family: "Fredericka the Great", cursive;
+    background-color: #23272a;
+    width: 170px;
+  }
+
+  .nav_links {
+    list-style: none;
+  }
+
+  .nav_links li {
+    display: inline-block;
+    padding: 0px 10px;
+  }
+
+  .nav_links li a {
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav_links li a:hover {
+    color: #0088a9;
+  }
+
+  button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #23272a;
+  }
+
+  button:hover {
+    background-color: gold;
+  }
+} */
+
+/*Desktop*/
+@media screen and (min-width: 1180px) {
+}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {
+}
