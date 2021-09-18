@@ -10,16 +10,3 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
   navBar.classList.toggle("under");
 });
-
-aboutMeLink.addEventListener("click", () => {
-  navLinks.classList.remove("open");
-  navBar.classList.toggle("under");
-});
-myProjectsLink.addEventListener("click", () => {
-  navLinks.classList.remove("open");
-  navBar.classList.toggle("under");
-});
-contactMeLink.addEventListener("click", () => {
-  navLinks.classList.remove("open");
-  navBar.classList.toggle("under");
-});

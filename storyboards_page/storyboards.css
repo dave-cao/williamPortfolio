@@ -1,0 +1,14 @@
+/*Variable*/
+:root {
+  --primary: #2ebdbd; /*accents*/
+  --secondary: white; /*background colour*/
+  --third: black; /*text colours and 20%*/
+  --fourth: #537c8e; /*darker accent*/
+  --fifth: #e1d9d1; /*darker background*/
+}
+/*Nav Bar*/
+.myStoryboardsLink {
+  background: var(--secondary);
+  padding: 10px 10px;
+  border-radius: 20px;
+}
