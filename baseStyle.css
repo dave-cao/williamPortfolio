@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap%27');
+
 /*Variable*/
 :root {
   --primary: #2ebdbd; /*accents*/
@@ -6,6 +8,7 @@
   --fourth: #537c8e; /*darker accent*/
   --fifth: #E1D9D1; /*darker background*/
 }
+
 /*Reset*/
 * {
   box-sizing: border-box;
@@ -13,12 +16,14 @@
   margin: 0;
   font-family: "Nanum Myeongjo";
   scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
 }
 html {
   position: relative;
   background-color: var(--secondary);
   color: var(--third);
   z-index: -2;
+  
 }
 
 /* base styles */
@@ -66,7 +71,6 @@ a {
   margin: 20px 20px;
   animation: name 5s ease-in-out reverse;
   cursor: pointer;
-  font-family: "Fredericka the Great", cursive;
   z-index: 4;
 }
 
