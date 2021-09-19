@@ -9,7 +9,7 @@
 }
 #heroName {
   font-size: 4rem;
-  margin-bottom: 250px;
+  /* margin-bottom: 250px; */
   letter-spacing: 5px;
   text-align: center;
   line-height: 4.5rem;
@@ -22,4 +22,18 @@ section {
   justify-content: center;
   align-items: center;
   line-height: 2rem;
+}
+/* small tablet sizes */
+@media screen and (min-width: 600px) {
+}
+/*Laptop*/
+@media screen and (min-width: 820px) {
+  /*Nav bar*/
+}
+/*Desktop*/
+@media screen and (min-width: 1180px) {
+}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {
 }
