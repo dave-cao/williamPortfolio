@@ -1,14 +1,48 @@
 /*Variable*/
 :root {
-  --primary: #2ebdbd; /*accents*/
-  --secondary: white; /*background colour*/
-  --third: black; /*text colours and 20%*/
-  --fourth: #537c8e; /*darker accent*/
-  --fifth: #e1d9d1; /*darker background*/
+  --primary: black; /*accents*/
+  --secondary: #eaebec; /*background colour*/
+  --third: #9d9d9d; /*text colours and 20%*/
+
+  --fourth: #9e9f9f; /*darker accent*/
+  --fifth: white; /*darker background*/
 }
 /*Nav Bar*/
 .myIllustrationsLink {
-  background: var(--secondary);
   padding: 10px 10px;
-  border-radius: 20px;
+  border-bottom: var(--fifth) 3px solid;
+  cursor: default;
+}
+section {
+  width: 100;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 2rem;
+  margin: 20px;
+  padding-top: 170px;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  margin: 10px 5px;
+}
+@media screen and (min-width: 600px) {
+}
+/*Laptop*/
+@media screen and (min-width: 820px) {
+  /*Nav bar*/
+  section img {
+    width: 400px;
+  }
+}
+/*Desktop*/
+@media screen and (min-width: 1180px) {
+}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {
 }

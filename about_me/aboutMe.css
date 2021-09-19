@@ -1,15 +1,25 @@
 /*Variable*/
 :root {
-  --primary: #2ebdbd; /*accents*/
-  --secondary: white; /*background colour*/
-  --third: black; /*text colours and 20%*/
-  --fourth: #537c8e; /*darker accent*/
-  --fifth: #e1d9d1; /*darker background*/
+  --primary: black; /*accents*/
+  --secondary: #eaebec; /*background colour*/
+  --third: #9d9d9d; /*text colours and 20%*/
+
+  --fourth: #9e9f9f; /*darker accent*/
+  --fifth: white; /*darker background*/
 }
 /*Nav Bar*/
 .aboutMeLink {
-  background: var(--secondary);
   padding: 10px 10px;
-  border-radius: 20px;
+  border-bottom: var(--fifth) 3px solid;
   cursor: default;
+}
+
+section {
+  width: 100;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
 }

@@ -1,14 +1,85 @@
 /*Variable*/
 :root {
-  --primary: #2ebdbd; /*accents*/
-  --secondary: white; /*background colour*/
-  --third: black; /*text colours and 20%*/
-  --fourth: #537c8e; /*darker accent*/
-  --fifth: #e1d9d1; /*darker background*/
+  --primary: black; /*accents*/
+  --secondary: #eaebec; /*background colour*/
+  --third: #9d9d9d; /*text colours and 20%*/
+
+  --fourth: #9e9f9f; /*darker accent*/
+  --fifth: white; /*darker background*/
 }
 /*Nav Bar*/
 .myStoryboardsLink {
-  background: var(--secondary);
   padding: 10px 10px;
-  border-radius: 20px;
+  border-bottom: var(--fifth) 3px solid;
+  cursor: default;
+}
+
+.pageGrid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(8, 1fr);
+  line-height: 1.5rem;
+  padding-top: 170px;
+  padding: 170px 20px 20px 20px;
+  gap: 20px;
+}
+section {
+  border: var(--primary) solid 3px;
+}
+section h2 {
+  margin: 20px;
+}
+
+#summary {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+#summary p {
+  margin: 0 15px 15px 15px;
+}
+#mainStoryboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 4/9;
+  grid-row: 1/3;
+}
+#characterDesign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 4/9;
+}
+.pictures {
+  display: flex;
+}
+/*testing*/
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*Laptop*/
+@media screen and (max-width: 800px) {
+  #summary {
+    grid-column: 1/9;
+    grid-row: 1/2;
+  }
+
+  #mainStoryboard {
+    grid-column: 1/9;
+    grid-row: 2/3;
+  }
+  #characterDesign {
+    grid-column: 1/9;
+  }
+  .pictures {
+    flex-direction: column;
+  }
 }

@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap%27");
 
 /*Variable*/
 :root {
-  --primary: #2ebdbd; /*accents*/
-  --secondary: white; /*background colour*/
-  --third: black; /*text colours and 20%*/
-  --fourth: #537c8e; /*darker accent*/
-  --fifth: #E1D9D1; /*darker background*/
+  --primary: black; /*accents*/
+  --secondary: #eaebec; /*background colour*/
+  --third: #9d9d9d; /*text colours and 20%*/
+
+  --fourth: #9e9f9f; /*darker accent*/
+  --fifth: white; /*darker background*/
 }
 
 /*Reset*/
@@ -21,9 +22,9 @@
 html {
   position: relative;
   background-color: var(--secondary);
-  color: var(--third);
+  color: var(--primary);
+  letter-spacing: 2px;
   z-index: -2;
-  
 }
 
 /* base styles */
@@ -68,7 +69,7 @@ a {
   color: var(--primary);
   width: 8em;
   font-size: 1.5em;
-  margin: 20px 20px;
+  margin: 15px 20px 20px 20px;
   animation: name 5s ease-in-out reverse;
   cursor: pointer;
   z-index: 4;
@@ -109,8 +110,8 @@ a {
 .nav_links_container.open {
   position: relative;
   z-index: 3;
-  clip-path: circle(1250px at 90% -10%);
-  -webkit-clip-path: circle(1250px at 90% -10%);
+  clip-path: circle(1350px at 90% -10%);
+  -webkit-clip-path: circle(1350px at 90% -10%);
   pointer-events: all;
 }
 
@@ -125,22 +126,7 @@ a {
 }
 
 .contactButton {
-  border: none;
   grid-column: 1/9;
-  justify-self: center;
-  height: 3em;
-  width: 10em;
-  border-radius: 50px;
-  cursor: pointer;
-  background-color: var(--primary);
-  transition: 0.2s ease-in;
-}
-.contactButton a {
-  color: var(--third);
-}
-.contactButton:hover {
-  color: var(--secondary);
-  background-color: var(--fourth);
 }
 
 .bold {
@@ -150,16 +136,15 @@ a {
   color: lightskyblue;
 }
 /*responsive nav bar*/
-@media screen and (min-width: 856px) {
+@media screen and (min-width: 1000px) {
   .navBar {
     position: absolute;
     width: 100%;
     color: var(--third);
     display: grid;
-    background-color: var(--secondary);
     justify-items: center;
     align-self: center;
-   z-index: 2;
+    z-index: 2;
   }
   .navBar.under {
     position: absolute;
@@ -170,6 +155,8 @@ a {
   }
   .nav_links_container {
     height: 60px;
+    margin-top: 50px;
+    background-color: var(--secondary);
     grid-column: 1/9;
     align-items: center;
     justify-items: center;
@@ -186,38 +173,23 @@ a {
     grid-column: 3/4;
   }
   .nav_links_container li:nth-child(2) {
-    grid-column: 4/6;
+    grid-column: 4/5;
   }
   .nav_links_container li:nth-child(3) {
-    grid-column: 6/7;
+    grid-column: 5/6;
   }
 
   .contactButton {
-    grid-column: 8/9;
+    grid-column: 6/7;
     margin-right: 15px;
   }
-
-  
 }
 
 /*Testing*/
 
-section {
-  display: flex;
-  position: relative;
-  height: 100vh;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  line-height: 3rem;
-}
 section h1 {
-  color: var(--primary)
+  color: var(--primary);
 }
-
-
-
-
 
 /* small tablet sizes */
 @media screen and (min-width: 600px) {
@@ -225,8 +197,7 @@ section h1 {
 /*Laptop*/
 @media screen and (min-width: 820px) {
   /*Nav bar*/
-  
-
+}
 /*Desktop*/
 @media screen and (min-width: 1180px) {
 }

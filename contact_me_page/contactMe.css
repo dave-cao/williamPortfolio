@@ -1,14 +1,133 @@
 /*Variable*/
 :root {
-  --primary: #2ebdbd; /*accents*/
-  --secondary: white; /*background colour*/
-  --third: black; /*text colours and 20%*/
-  --fourth: #537c8e; /*darker accent*/
-  --fifth: #e1d9d1; /*darker background*/
+  --primary: black; /*accents*/
+  --secondary: #eaebec; /*background colour*/
+  --third: #9d9d9d; /*text colours and 20%*/
+
+  --fourth: #9e9f9f; /*darker accent*/
+  --fifth: white; /*darker background*/
 }
 /*Nav Bar*/
-button.contactMeLink {
-  background: var(--secondary) !important;
+.contactMeLink {
+  padding: 10px 0px;
+  border-bottom: var(--fifth) 3px solid;
+  cursor: default;
+}
+section {
+  width: 100;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 2rem;
+}
+
+#contactMeTitle {
+  cursor: pointer;
+}
+
+.contactMePage {
+  background-color: var(--secondary);
+  border-top: 1.5px solid var(--fourth);
+  border-bottom: 1.5px solid var(--fourth);
+}
+.contactMePage h3 {
+  text-align: center;
+  margin: 20px 0px;
+  color: var(--primary);
+}
+.formContainer {
+  margin: 30px;
+}
+.formContainer div {
+  margin: 15px 5px;
+}
+
+.formContainer input,
+textarea,
+select {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 12px 10px;
+  transition: 0.2s linear;
+  border: 2px solid var(--third);
+}
+input:focus,
+textarea:focus {
+  border: 2px solid var(--fourth);
+}
+
+.formContainer textarea {
+  resize: none;
+}
+
+.submitButton {
+  text-align: center;
+}
+.formContainer input[type="submit"] {
+  position: relative;
   padding: 10px 10px;
-  border-radius: 20px;
+  cursor: pointer;
+  height: 3em;
+  width: 10em;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary);
+}
+.formContainer input[type="submit"]:hover {
+  background-color: var(--fourth);
+}
+
+section .contactWords {
+  width: 100%;
+  height: 100vh;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  padding-bottom: 400px;
+  line-height: 4rem;
+}
+.contactWords h1 {
+  font-size: 3rem;
+}
+.contactWords p {
+  font-size: 1.2rem;
+}
+
+/* small tablet sizes */
+@media screen and (min-width: 600px) {
+}
+/*Laptop*/
+@media screen and (min-width: 820px) {
+  .contactMePage {
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
+    text-align: end;
+  }
+  section .contactWords {
+    display: flex;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1180px) {
+  .formContainer {
+    width: 600px;
+    margin-right: 10%;
+  }
+}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {
+  .formContainer {
+    width: 600px;
+  }
 }
