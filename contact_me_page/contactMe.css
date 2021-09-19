@@ -14,7 +14,7 @@
   cursor: default;
 }
 section {
-  width: 100;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ textarea:focus {
 }
 
 section .contactWords {
-  width: 100%;
+  width: 50%;
   height: 100vh;
   margin: 20px;
   display: flex;
@@ -90,8 +90,11 @@ section .contactWords {
   align-items: center;
   justify-content: center;
   display: none;
-  padding-bottom: 400px;
+  padding-bottom: 20px;
   line-height: 4rem;
+}
+.contactWords {
+  cursor: default;
 }
 .contactWords h1 {
   font-size: 3rem;
@@ -105,13 +108,6 @@ section .contactWords {
 }
 /*Laptop*/
 @media screen and (min-width: 820px) {
-  .contactMePage {
-    display: flex;
-    align-items: right;
-    justify-content: center;
-    flex-direction: column;
-    text-align: end;
-  }
   section .contactWords {
     display: flex;
   }
@@ -119,15 +115,8 @@ section .contactWords {
 
 /*Desktop*/
 @media screen and (min-width: 1180px) {
-  .formContainer {
-    width: 600px;
-    margin-right: 10%;
-  }
 }
 
 /*Ultra-wide*/
 @media screen and (min-width: 1500px) {
-  .formContainer {
-    width: 600px;
-  }
 }

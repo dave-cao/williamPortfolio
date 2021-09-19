@@ -136,14 +136,12 @@ a {
   color: lightskyblue;
 }
 /*responsive nav bar*/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
   .navBar {
     position: absolute;
     width: 100%;
     color: var(--third);
-    display: grid;
-    justify-items: center;
-    align-self: center;
+    display: flex;
     z-index: 2;
   }
   .navBar.under {
@@ -154,13 +152,12 @@ a {
     display: none;
   }
   .nav_links_container {
+    display: flex;
+    justify-content: space-around;
     height: 60px;
     margin-top: 50px;
+    margin: 50px 20% 0px 20%;
     background-color: var(--secondary);
-    grid-column: 1/9;
-    align-items: center;
-    justify-items: center;
-    align-items: center;
     clip-path: none;
     transition: all 1s ease-out;
     pointer-events: all;
@@ -169,7 +166,7 @@ a {
     clip-path: none;
   }
 
-  .nav_links_container li:nth-child(1) {
+  /* .nav_links_container li:nth-child(1) {
     grid-column: 3/4;
   }
   .nav_links_container li:nth-child(2) {
@@ -177,7 +174,7 @@ a {
   }
   .nav_links_container li:nth-child(3) {
     grid-column: 5/6;
-  }
+  } */
 
   .contactButton {
     grid-column: 6/7;
