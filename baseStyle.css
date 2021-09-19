@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap%27");
 
 /*Variable*/
 :root {
   --primary: black; /*accents*/
-  --secondary: #eaebec; /*background colour*/
-  --third: #9d9d9d; /*text colours and 20%*/
+  --secondary: #a9a9a9; /*background colour*/
+  --third: #656565; /*text colours and 20%*/
 
   --fourth: #9e9f9f; /*darker accent*/
   --fifth: white; /*darker background*/
@@ -15,9 +16,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Nanum Myeongjo";
   scroll-behavior: smooth;
-  font-family: "Lato", sans-serif;
+  font-family: "Alata", sans-serif;
 }
 html {
   position: relative;
