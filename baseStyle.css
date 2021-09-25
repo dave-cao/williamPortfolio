@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap%27");
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap%27");
-
-/*Variable*/
-:root {
-  --primary: black; /*accents*/
-  --secondary: #a9a9a9; /*background colour*/
-  --third: #656565; /*text colours and 20%*/
-
-  --fourth: #9e9f9f; /*darker accent*/
-  --fifth: white; /*darker background*/
-}
+@import url("/variables.css");
 
 /*Reset*/
 * {
@@ -19,6 +10,14 @@
   scroll-behavior: smooth;
   font-family: "Alata", sans-serif;
 }
+#background {
+  position: absolute;
+  width: 100%;
+
+  z-index: -2;
+  filter: saturate(60%);
+}
+
 html {
   position: relative;
   background-color: var(--secondary);

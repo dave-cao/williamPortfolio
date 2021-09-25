@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/baseStyle.css" />
     <link rel="stylesheet" href="storyboards.css" />
   </head>
+  <div id="background"></div>
   <body>
     <div>
       <a href="/index.html">
@@ -52,8 +53,13 @@
         </p>
       </section>
       <section id="mainStoryboard">
-        <h2>StoryBoard - Felix</h2>
-        <img src="/Assets/placeholder.png" alt="Main Storyboard" />
+        <h2>StoryBoard - Unsettled</h2>
+        <img
+          id="unsettledStoryboard"
+          src="unsettled/pg-001.jpg"
+          alt=""
+          onclick="unsettledFunction()"
+        />
       </section>
 
       <section id="characterDesign">
@@ -63,8 +69,33 @@
           <img src="/Assets/placeholder.png" alt="" />
         </div>
       </section>
+
+      <section id="secondStoryboard">
+        <h2>Code 8 Storyboard</h2>
+        <div class="pictures">
+          <img
+            id="codeStoryboard"
+            src="code/pg-01.jpg"
+            alt=""
+            onclick="codeStoryboardFunction()"
+          />
+        </div>
+      </section>
+
+      <section id="thirdStoryboard">
+        <h2>Felix Comedy</h2>
+        <div class="pictures">
+          <img
+            id="felixStoryboard"
+            src="Felix_Comedy_Storyboard/pg-01.jpg"
+            alt="Main Storyboard"
+            onclick="felixComedyFunction()"
+          />
+        </div>
+      </section>
     </div>
 
     <script src="/main.js" async defer></script>
+    <script src="/storyboards_page/storyboards.js" async defer></script>
   </body>
 </html>

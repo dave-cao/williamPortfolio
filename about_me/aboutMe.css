@@ -1,11 +1,5 @@
-/*Variable*/
-:root {
-  --primary: black; /*accents*/
-  --secondary: #a9a9a9; /*background colour*/
-  --third: #656565; /*text colours and 20%*/
-  --fourth: #9e9f9f; /*darker accent*/
-  --fifth: white; /*darker background*/
-}
+@import url("/variables.css");
+
 /*Nav Bar*/
 .aboutMeLink {
   padding: 10px 10px;

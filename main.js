@@ -10,3 +10,11 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
   navBar.classList.toggle("under");
 });
+
+//enlarge all photos when clicked
+const images = document.querySelectorAll("img");
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener("click", () => {
+    images[i].classList.toggle("enlarge");
+  });
+}

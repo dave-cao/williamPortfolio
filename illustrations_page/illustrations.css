@@ -1,11 +1,5 @@
-/*Variable*/
-:root {
-  --primary: black; /*accents*/
-  --secondary: #a9a9a9; /*background colour*/
-  --third: #656565; /*text colours and 20%*/
-  --fourth: #9e9f9f; /*darker accent*/
-  --fifth: white; /*darker background*/
-}
+@import url("/variables.css");
+
 /*Nav Bar*/
 .myIllustrationsLink {
   padding: 10px 10px;
@@ -25,18 +19,30 @@ section {
 }
 
 section img {
-  width: 100%;
+  width: min(100%, 500px);
   height: auto;
   margin: 10px 5px;
+}
+#imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/*Enlarge image when clicked*/
+
+img.enlarge {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 600px) {
 }
 /*Laptop*/
 @media screen and (min-width: 820px) {
   /*Nav bar*/
-  section img {
-    width: 400px;
-  }
 }
 /*Desktop*/
 @media screen and (min-width: 1180px) {

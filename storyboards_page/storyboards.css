@@ -1,11 +1,5 @@
-/*Variable*/
-:root {
-  --primary: black; /*accents*/
-  --secondary: #a9a9a9; /*background colour*/
-  --third: #656565; /*text colours and 20%*/
-  --fourth: #9e9f9f; /*darker accent*/
-  --fifth: white; /*darker background*/
-}
+@import url("/variables.css");
+
 /*Nav Bar*/
 .myStoryboardsLink {
   padding: 10px 10px;
@@ -54,6 +48,15 @@ section h2 {
   align-items: center;
   grid-column: 4/9;
 }
+
+#secondStoryboard {
+  grid-column: 1/5;
+}
+
+#thirdStoryboard {
+  grid-column: 5/9;
+}
+
 .pictures {
   display: flex;
 }
@@ -78,6 +81,15 @@ img {
   #characterDesign {
     grid-column: 1/9;
   }
+
+  #secondStoryboard {
+    grid-column: 1/9;
+  }
+
+  #thirdStoryboard {
+    grid-column: 1/9;
+  }
+
   .pictures {
     flex-direction: column;
   }
