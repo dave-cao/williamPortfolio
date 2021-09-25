@@ -43,54 +43,71 @@
         <img src="/Assets/placeholder.png" alt="" />
         <h2>Summary</h2>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          A novice monk tries to focus in the Buddha Hall during his punishment.
+          But his best friend distracts him from doing so. Created in Chris
+          Amick’s and Andy Cung’s How to Write/Storyboard an animated scene
+          (Sept 2021).
         </p>
       </section>
       <section id="mainStoryboard">
-        <h2>StoryBoard - Unsettled</h2>
-        <img
-          id="unsettledStoryboard"
-          src="unsettled/pg-001.jpg"
-          alt=""
-          onclick="unsettledFunction()"
-        />
+        <h2>Unsettled</h2>
+        <img id="unsettledStoryboard" src="unsettled/pg-002.jpg" alt="" />
+        <div class="flip">
+          <button onclick="unsettledPrevious()">Previous</button>
+          <button onclick="unsettledFunction()">Next</button>
+        </div>
       </section>
 
       <section id="characterDesign">
-        <h2>Felix - Character Design</h2>
+        <h2>Unsettled - Character Design</h2>
         <div class="pictures">
-          <img src="/Assets/placeholder.png" alt="" />
-          <img src="/Assets/placeholder.png" alt="" />
+          <img src="/Assets/Character exploration for Unsettled.jpg" alt="" />
         </div>
       </section>
 
+      <!--Second storyboard-->
+      <section id="summary_two">
+        <img src="/Assets/placeholder.png" alt="" />
+        <h2>Summary</h2>
+        <p>
+          "A woman tries to escape reality with drugs and her friend persuades
+          her to quit. Created in Andy Cung’s SB1 class (Made in July 2021)"
+        </p>
+      </section>
       <section id="secondStoryboard">
-        <h2>Code 8 Storyboard</h2>
+        <h2>Storyboard Based on Script from Code 8</h2>
         <div class="pictures">
-          <img
-            id="codeStoryboard"
-            src="code/pg-01.jpg"
-            alt=""
-            onclick="codeStoryboardFunction()"
-          />
+          <img id="codeStoryboard" src="code/pg-01.jpg" alt="" />
         </div>
+        <div class="flip">
+          <button onclick="codePrevious()">Previous</button>
+          <button onclick="codeStoryboardFunction()">Next</button>
+        </div>
+      </section>
+
+      <!--Third storyboard-->
+      <section id="summary_three">
+        <img src="/Assets/placeholder.png" alt="" />
+        <h2>Summary</h2>
+        <p>
+          "A novice monk’s best friend convinces him to play hooky and go to a
+          festival with her. He devises a plan to steal money from the temple’s
+          donation box (Made in February 2021)"
+        </p>
       </section>
 
       <section id="thirdStoryboard">
-        <h2>Felix Comedy</h2>
+        <h2>Donations for the Festival</h2>
         <div class="pictures">
           <img
             id="felixStoryboard"
-            src="Felix_Comedy_Storyboard/pg-01.jpg"
+            src="Felix_Comedy_Storyboard/pg-02.jpg"
             alt="Main Storyboard"
-            onclick="felixComedyFunction()"
           />
+        </div>
+        <div class="flip">
+          <button onclick="felixPrevious()">Previous</button>
+          <button onclick="felixComedyFunction()">Next</button>
         </div>
       </section>
     </div>

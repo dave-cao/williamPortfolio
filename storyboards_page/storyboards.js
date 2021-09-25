@@ -1,5 +1,4 @@
 const felixComedyArray = [
-  "Felix_Comedy_Storyboard/pg-01.jpg",
   "Felix_Comedy_Storyboard/pg-02.jpg",
   "Felix_Comedy_Storyboard/pg-03.jpg",
   "Felix_Comedy_Storyboard/pg-04.jpg",
@@ -98,7 +97,6 @@ const felixComedyArray = [
 
 //code 8
 const codeStoryboardArray = [
-  "code/pg-01.jpg",
   "code/pg-02.jpg",
   "code/pg-03.jpg",
   "code/pg-04.jpg",
@@ -199,7 +197,6 @@ const codeStoryboardArray = [
 ];
 
 const unsettledArray = [
-  "unsettled/pg-001.jpg",
   "unsettled/pg-002.jpg",
   "unsettled/pg-003.jpg",
   "unsettled/pg-004.jpg",
@@ -383,37 +380,66 @@ const unsettledArray = [
   "unsettled/pg-182.jpg",
 ];
 
-let felixComedyIncrement = 1;
-const felixComedyFunction = () => {
-  if (felixComedyIncrement === felixComedyArray.length) {
-    felixComedyIncrement = 0;
-  }
-  document.querySelector("#felixStoryboard").src =
-    felixComedyArray[felixComedyIncrement];
-  felixComedyIncrement++;
-};
-
-let codeStoryboardIncrement = 1;
-const codeStoryboardFunction = () => {
-  if (codeStoryboardIncrement === codeStoryboardArray.length) {
-    codeStoryboardIncrement = 0;
-  }
-  document.querySelector("#codeStoryboard").src =
-    codeStoryboardArray[codeStoryboardIncrement];
-  codeStoryboardIncrement++;
-};
-
-let unsettledIncrement = 1;
+//main storyboard
+let unsettledIncrement = 0;
 const unsettledFunction = () => {
-  if (unsettledIncrement === unsettledArray.length) {
-    unsettledIncrement = 0;
+  if (unsettledIncrement >= unsettledArray.length - 1) {
+    unsettledIncrement = -1;
   }
+  unsettledIncrement++;
   document.querySelector("#unsettledStoryboard").src =
     unsettledArray[unsettledIncrement];
-  unsettledIncrement++;
+};
+const unsettledPrevious = () => {
+  if (unsettledIncrement <= 0) {
+    unsettledIncrement = unsettledArray.length;
+  }
+  unsettledIncrement--;
+  document.querySelector("#unsettledStoryboard").src =
+    unsettledArray[unsettledIncrement];
 };
 
-function flip_storyboard(storyBoardArray, imageID) {
-  let codeStoryboardIncrement = 1;
-  let felixIncrement = 1;
-}
+//second storyboard
+let codeStoryboardIncrement = 0;
+const codeStoryboardFunction = () => {
+  if (codeStoryboardIncrement >= codeStoryboardArray.length - 1) {
+    codeStoryboardIncrement = -1;
+  }
+  codeStoryboardIncrement++;
+  document.querySelector("#codeStoryboard").src =
+    codeStoryboardArray[codeStoryboardIncrement];
+};
+
+const codePrevious = () => {
+  if (codeStoryboardIncrement <= 0) {
+    codeStoryboardIncrement = codeStoryboardArray.length;
+  }
+  codeStoryboardIncrement--;
+  document.querySelector("#codeStoryboard").src =
+    codeStoryboardArray[codeStoryboardIncrement];
+};
+
+//third storyboard
+let felixComedyIncrement = 0;
+const felixComedyFunction = () => {
+  if (felixComedyIncrement === felixComedyArray.length - 1) {
+    felixComedyIncrement = -1;
+  }
+  felixComedyIncrement++;
+  document.querySelector("#felixStoryboard").src =
+    felixComedyArray[felixComedyIncrement];
+};
+
+const felixPrevious = () => {
+  if (felixComedyIncrement <= 0) {
+    felixComedyIncrement = felixComedyArray.length;
+  }
+  felixComedyIncrement--;
+  document.querySelector("#felixStoryboard").src =
+    felixComedyArray[felixComedyIncrement];
+};
+
+// function flip_storyboard(storyBoardArray, imageID) {
+//   let codeStoryboardIncrement = 1;
+//   let felixIncrement = 1;
+// }
