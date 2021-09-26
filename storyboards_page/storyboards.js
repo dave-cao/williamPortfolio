@@ -197,19 +197,17 @@ const codeStoryboardArray = [
 ];
 
 const unsettledArray = [
+  "/Assets/UnsettledCover.jpg",
   "unsettled/pg-002.jpg",
   "unsettled/pg-003.jpg",
   "unsettled/pg-004.jpg",
   "unsettled/pg-005.jpg",
-  "unsettled/pg-006.jpg",
   "unsettled/pg-007.jpg",
   "unsettled/pg-008.jpg",
   "unsettled/pg-009.jpg",
   "unsettled/pg-010.jpg",
   "unsettled/pg-011.jpg",
-  "unsettled/pg-012.jpg",
   "unsettled/pg-013.jpg",
-  "unsettled/pg-014.jpg",
   "unsettled/pg-015.jpg",
   "unsettled/pg-016.jpg",
   "unsettled/pg-017.jpg",
