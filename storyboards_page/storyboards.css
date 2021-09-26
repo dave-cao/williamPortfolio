@@ -15,6 +15,7 @@
   padding-top: 170px;
   padding: 170px 20px 20px 20px;
   gap: 20px;
+  justify-items: center;
 }
 section {
   border: var(--primary) solid 3px;
@@ -105,6 +106,10 @@ img {
   width: 100%;
   height: auto;
 }
+button {
+  margin: 10px;
+  padding: 5px;
+}
 
 /*Laptop*/
 @media screen and (max-width: 800px) {
@@ -124,24 +129,30 @@ img {
 
   #secondStoryboard {
     grid-column: 1/9;
-    grid-row: 4/5;
-  }
-  #summary_two {
-    grid-column: 1/9;
-    grid-row: 5/6;
-  }
-
-  #thirdStoryboard {
-    grid-column: 1/9;
     grid-row: 6/7;
   }
-
-  #summary_three {
+  #summary_two {
     grid-column: 1/9;
     grid-row: 7/8;
   }
 
+  #thirdStoryboard {
+    grid-column: 1/9;
+    grid-row: 10/11;
+  }
+
+  #summary_three {
+    grid-column: 1/9;
+    grid-row: 11/12;
+  }
+
   .pictures {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .pageGrid {
+    margin: 0 7vw 0 7vw;
   }
 }

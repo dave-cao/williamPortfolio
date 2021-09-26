@@ -8,15 +8,34 @@
 }
 
 section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   line-height: 2rem;
+  margin: 20px;
+  padding-top: 200px;
+}
+section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
 }
 
 section p {
   width: min(600px, 100%);
   padding: 20px;
+}
+img {
+  width: 300px;
+}
+
+@media screen and (max-width: 899px) {
+  section {
+    padding-top: 110px;
+  }
+  section div {
+    flex-direction: column;
+  }
 }

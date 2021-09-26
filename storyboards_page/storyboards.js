@@ -438,8 +438,3 @@ const felixPrevious = () => {
   document.querySelector("#felixStoryboard").src =
     felixComedyArray[felixComedyIncrement];
 };
-
-// function flip_storyboard(storyBoardArray, imageID) {
-//   let codeStoryboardIncrement = 1;
-//   let felixIncrement = 1;
-// }
