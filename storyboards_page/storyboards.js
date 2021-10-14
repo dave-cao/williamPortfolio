@@ -378,6 +378,25 @@ const unsettledArray = [
   "unsettled/pg-182.jpg",
 ];
 
+unsettledWideArray = [
+  "Unsettled_wide/pg-02.jpg",
+  "Unsettled_wide/pg-03.jpg",
+  "Unsettled_wide/pg-04.jpg",
+  "Unsettled_wide/pg-05.jpg",
+  "Unsettled_wide/pg-06.jpg",
+  "Unsettled_wide/pg-07.jpg",
+  "Unsettled_wide/pg-08.jpg",
+  "Unsettled_wide/pg-09.jpg",
+  "Unsettled_wide/pg-10.jpg",
+  "Unsettled_wide/pg-11.jpg",
+  "Unsettled_wide/pg-12.jpg",
+  "Unsettled_wide/pg-13.jpg",
+  "Unsettled_wide/pg-14.jpg",
+  "Unsettled_wide/pg-15.jpg",
+  "Unsettled_wide/pg-16.jpg",
+  "Unsettled_wide/pg-17.jpg",
+];
+
 //main storyboard
 let unsettledIncrement = 0;
 const unsettledFunction = () => {
@@ -395,6 +414,25 @@ const unsettledPrevious = () => {
   unsettledIncrement--;
   document.querySelector("#unsettledStoryboard").src =
     unsettledArray[unsettledIncrement];
+};
+
+//main WIDE storyboard
+let unsettledWideIncrement = 0;
+const unsettledWideFunction = () => {
+  if (unsettledWideIncrement >= unsettledWideArray.length - 1) {
+    unsettledWideIncrement = -1;
+  }
+  unsettledWideIncrement++;
+  document.querySelector("#unsettledWideStoryboard").src =
+    unsettledWideArray[unsettledWideIncrement];
+};
+const unsettledWidePrevious = () => {
+  if (unsettledWideIncrement <= 0) {
+    unsettledWideIncrement = unsettledWideArray.length;
+  }
+  unsettledWideIncrement--;
+  document.querySelector("#unsettledWideStoryboard").src =
+    unsettledWideArray[unsettledWideIncrement];
 };
 
 //second storyboard

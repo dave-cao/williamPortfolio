@@ -19,6 +19,7 @@
 }
 section {
   border: var(--primary) solid 3px;
+  background-color: #e2cebb;
 }
 section h2 {
   margin: 20px;
