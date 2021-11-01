@@ -2,52 +2,54 @@
 
 /*Nav Bar*/
 .myIllustrationsLink {
-  padding: 10px 10px;
-  border-bottom: var(--fifth) 3px solid;
-  cursor: default;
+    padding: 10px 10px;
+    border-bottom: var(--fifth) 3px solid;
+    cursor: default;
 }
+
 section {
-  width: 100;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  line-height: 2rem;
-  margin: 0px 20px;
-  padding-top: 170px;
+    width: 100;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 2rem;
+    margin: 0px 20px;
+    padding-top: 170px;
 }
 
 section img {
-  width: min(100%, 500px);
-  height: auto;
-  margin: 10px 5px;
+    width: min(100%, 500px);
+    height: auto;
+    margin: 10px 5px;
 }
+
 #imgContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 /*Enlarge image when clicked*/
 
 img.enlarge {
-  height: auto;
-  max-width: 100%;
-  width: 100%;
-}
-@media screen and (min-width: 600px) {
-}
-/*Laptop*/
-@media screen and (min-width: 820px) {
-  /*Nav bar*/
-}
-/*Desktop*/
-@media screen and (min-width: 1180px) {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
 }
 
-/*Ultra-wide*/
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 600px) {}
+
+/*Laptop*/
+@media screen and (min-width: 820px) {
+    /*Nav bar*/
 }
+
+/*Desktop*/
+@media screen and (min-width: 1180px) {}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {}
