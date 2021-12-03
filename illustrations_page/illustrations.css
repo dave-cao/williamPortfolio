@@ -39,6 +39,11 @@ img.enlarge {
     height: auto;
     max-width: 100%;
     width: 100%;
+    cursor: zoom-out;
+}
+
+img {
+    cursor: zoom-in;
 }
 
 @media screen and (min-width: 600px) {}
