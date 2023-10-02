@@ -1,126 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/baseStyle.css" />
-    <link rel="stylesheet" href="storyboards.css" />
-  </head>
-  <div id="background"></div>
-  <body>
-    <div>
-      <a href="/index.html">
-        <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
-      </a>
-    </div>
-    <div class="hamburger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <nav class="navBar grid">
-      <ul class="nav_links_container grid">
-        <li class="aboutMeLink">
-          <a href="/about_me/aboutMe.html">About Me</a>
-        </li>
-        <li class="myStoryboardsLink">
-          <a href="/storyboards_page/storyboards.html">Storyboards</a>
-        </li>
-        <li class="myIllustrationsLink">
-          <a href="/illustrations_page/illustrations.html">Illustrations</a>
-        </li>
-        <li class="contactButton contactMeLink">
-          <a href="/contact_me_page/contactMe.html">Contact Me!</a>
-        </li>
-      </ul>
-    </nav>
 
-    <div class="pageGrid">
-      <section id="summary">
-        <img src="/Assets/unsettledSummary.jpg" alt="" />
-        <h2>Summary</h2>
-        <p>
-          A novice monk tries to focus in the Buddha Hall during his punishment.
-          But his best friend distracts him from doing so. Created in Chris
-          Amick’s and Andy Cung’s How to Write/Storyboard an animated scene
-          (Sept 2021).
-        </p>
-      </section>
-      <section id="mainStoryboard">
-        <h2>Unsettled</h2>
-        <img id="unsettledStoryboard" src="/Assets/UnsettledCover.jpg" alt="" />
-        <div class="flip">
-          <button onclick="unsettledPrevious()">Previous</button>
-          <button onclick="unsettledFunction()">Next</button>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/baseStyle.css" />
+  <link rel="stylesheet" href="storyboards.css" />
+</head>
+<div id="background"></div>
 
-        <img
-          id="unsettledWideStoryboard"
-          src="Unsettled_wide/pg-02.jpg"
-          alt=""
-        />
-        <div class="flip">
-          <button onclick="unsettledWidePrevious()">Previous</button>
-          <button onclick="unsettledWideFunction()">Next</button>
-        </div>
-      </section>
+<body>
+  <div>
+    <a href="/index.html">
+      <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
+    </a>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <nav class="navBar grid">
+    <ul class="nav_links_container grid">
+      <li class="aboutMeLink">
+        <a href="/about_me/aboutMe.html">About Me</a>
+      </li>
+      <li class="myStoryboardsLink">
+        <a href="/storyboards_page/storyboards.html">Storyboards</a>
+      </li>
+      <li class="myIllustrationsLink">
+        <a href="/illustrations_page/illustrations.html">Illustrations</a>
+      </li>
+      <li class="contactButton contactMeLink">
+        <a href="/contact_me_page/contactMe.html">Contact Me!</a>
+      </li>
+    </ul>
+  </nav>
 
-      <section id="characterDesign">
-        <h2>Unsettled - Character Design</h2>
-        <div class="pictures">
-          <img src="/Assets/Character exploration for Unsettled.jpg" alt="" />
-        </div>
-      </section>
+  <div class="pageGrid">
+    <h1 class="title-1">Silver Strings</h1>
+    <h1 class="title-2">Unsettled</h1>
+    <h1 class="title-3">Code 8</h1>
+    <section id="summary">
+      <img src="/Assets/storyboard/silverstrings/Silver Strings title page 1.jpg" alt="" />
+      <h2>Summary</h2>
+      <p>
+        This storyboard was inspired by a song my friend made. The story is about a young man named Ian who struggles to
+        to make music, and by extension, struggles to love himself. Created in June 2023.
+      </p>
+    </section>
+    <section id="mainStoryboard">
+      <h2>Silver Strings Storyboard</h2>
+      <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src="/Assets/storyboard/silverstrings/Silver Strings Final.pdf"></iframe>
+      </div>
 
-      <!--Second storyboard-->
-      <section id="summary_two">
-        <h2>Summary</h2>
-        <p>
-          "A woman tries to escape reality with drugs and her friend persuades
-          her to quit. Created in Andy Cung’s SB1 class (Made in July 2021)"
-        </p>
-      </section>
-      <section id="secondStoryboard">
-        <h2>Storyboard Based on Script from Code 8</h2>
-        <div class="pictures">
-          <img id="codeStoryboard" src="code/pg-01.jpg" alt="" />
-        </div>
-        <div class="flip">
-          <button onclick="codePrevious()">Previous</button>
-          <button onclick="codeStoryboardFunction()">Next</button>
-        </div>
-      </section>
 
-      <!--Third storyboard-->
-      <section id="summary_three">
-        <h2>Summary</h2>
-        <p>
-          "A novice monk’s best friend convinces him to play hooky and go to a
-          festival with her. He devises a plan to steal money from the temple’s
-          donation box (Made in February 2021)"
-        </p>
-      </section>
+    </section>
 
-      <section id="thirdStoryboard">
-        <h2>Donations for the Festival</h2>
-        <div class="pictures">
-          <img
-            id="felixStoryboard"
-            src="Felix_Comedy_Storyboard/pg-02.jpg"
-            alt="Main Storyboard"
-          />
-        </div>
-        <div class="flip">
-          <button onclick="felixPrevious()">Previous</button>
-          <button onclick="felixComedyFunction()">Next</button>
-        </div>
-      </section>
-    </div>
+    <section class="video">
+      <h2>A story about self love</h2>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="100%" height="100%"
+          src="https://www.youtube.com/embed/NWX5xs_opmc?si=Af-DLkMCBP01DdJV" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+    </section>
 
-    <script src="/main.js" async defer></script>
-    <script src="/storyboards_page/storyboards.js" async defer></script>
-  </body>
+    <section id="characterDesign">
+      <h2>Silver Strings - Character Design</h2>
+      <div class="pictures">
+        <img class="cdesign" src="/Assets/storyboard/silverstrings/Silver strings characters.jpg" alt="" />
+      </div>
+    </section>
+
+    <!--Unsettled Storyboard-->
+
+    <section id="summary_two">
+      <img src="/Assets/unsettledSummary.jpg" alt="" />
+      <h2>Summary</h2>
+      <p>
+        A novice monk tries to focus in the Buddha Hall during his punishment.
+        But his best friend distracts him from doing so. Created in Chris
+        Amick’s and Andy Cung’s How to Write/Storyboard an animated scene
+        (Sept 2021).
+      </p>
+    </section>
+    <section id="secondStoryboard">
+      <h2>Unsettled</h2>
+      <img id="unsettledStoryboard" src="/Assets/UnsettledCover.jpg" alt="" />
+      <div class="flip">
+        <button onclick="unsettledPrevious()">Previous</button>
+        <button onclick="unsettledFunction()">Next</button>
+      </div>
+
+      <img id="unsettledWideStoryboard" src="Unsettled_wide/pg-02.jpg" alt="" />
+      <div class="flip">
+        <button onclick="unsettledWidePrevious()">Previous</button>
+        <button onclick="unsettledWideFunction()">Next</button>
+      </div>
+    </section>
+
+    <section id="characterDesign_two">
+      <h2>Unsettled - Character Design</h2>
+      <div class="pictures">
+        <img src="/Assets/Character exploration for Unsettled.jpg" alt="" />
+      </div>
+    </section>
+
+
+
+
+    <!--third storyboard-->
+    <section id="summary_three">
+      <h2>Summary</h2>
+      <p>
+        "A woman tries to escape reality with drugs and her friend persuades
+        her to quit. Created in Andy Cung’s SB1 class (Made in July 2021)"
+      </p>
+    </section>
+    <section id="thirdStoryboard">
+      <h2>Storyboard Based on Script from Code 8</h2>
+      <div class="pictures">
+        <img id="codeStoryboard" src="code/pg-01.jpg" alt="" />
+      </div>
+      <div class="flip">
+        <button onclick="codePrevious()">Previous</button>
+        <button onclick="codeStoryboardFunction()">Next</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/main.js" async defer></script>
+  <script src="/storyboards_page/storyboards.js" async defer></script>
+</body>
+
 </html>

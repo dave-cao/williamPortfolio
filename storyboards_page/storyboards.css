@@ -1,5 +1,9 @@
 @import url("/variables.css");
 
+body {
+  background-color: #e3c8af;
+}
+
 /*Nav Bar*/
 .myStoryboardsLink {
   padding: 10px 10px;
@@ -17,53 +21,104 @@
   gap: 20px;
   justify-items: center;
 }
+
 section {
   border: var(--primary) solid 3px;
   background-color: #e2cebb;
 }
+
 section h2 {
   margin: 20px;
 }
 
 /*main storyboard*/
+
+#summary p {
+  margin: 0 15px 15px 15px;
+}
+
+#mainStoryboard h2 {
+  font-size: 2rem;
+}
+
+.title-1,
+.title-2,
+.title-3 {
+  font-size: 32px;
+  /* Adjust the font size as needed */
+  color: #333;
+  /* Set the text color */
+  font-weight: bold;
+  /* Make the text bold */
+  text-transform: uppercase;
+  /* Convert text to uppercase */
+  margin-bottom: 10px;
+  /* Add some spacing at the bottom */
+  margin-top: 20px;
+}
+
+.title-1 {
+  grid-column: 1/9;
+  grid-row: 1;
+}
+
 #summary {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-column: 1/4;
-  grid-row: 1/4;
+  grid-column: 6/9;
+  grid-row: 2/5;
 }
-#summary p {
-  margin: 0 15px 15px 15px;
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  grid-column: 1/6;
+  grid-row: 2/5;
 }
+
 #mainStoryboard {
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-column: 4/9;
-  grid-row: 1/3;
+  grid-row: 5/6;
+  width: 100%;
 }
 
-#mainStoryboard h2 {
-  font-size: 2rem;
-}
+
 #characterDesign {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-column: 4/9;
+  grid-column: 1/4;
+  grid-row: 5/6;
 }
 
+#characterDesign .pictures {
+  max-width: 500px;
+}
+
+
 /*second storyboard*/
+
+.title-2 {
+  grid-column: 1/9;
+  grid-row: 7/8;
+}
+
 #secondStoryboard {
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-column: 1/6;
-  grid-row: 6/9;
+  grid-row: 8/12;
 }
+
 #summary_two {
   position: relative;
   z-index: 1;
@@ -71,10 +126,22 @@ section h2 {
   flex-direction: column;
   align-items: center;
   grid-column: 6/9;
-  grid-row: 6/9;
+  grid-row: 8/11;
 }
+
+#characterDesign_two {
+  grid-column: 6/9;
+  grid-row: 11/12;
+}
+
+
 #summary_two p {
   margin: 0 15px 15px 15px;
+}
+
+.title-3 {
+  grid-column: 1/9;
+  grid-row: 12/13;
 }
 
 #summary_three {
@@ -84,8 +151,9 @@ section h2 {
   flex-direction: column;
   align-items: center;
   grid-column: 1/4;
-  grid-row: 11/13;
+  grid-row: 13/15;
 }
+
 #summary_three p {
   margin: 0 15px 15px 15px;
 }
@@ -95,18 +163,20 @@ section h2 {
   flex-direction: column;
   align-items: center;
   grid-column: 4/9;
-  grid-row: 11/13;
+  grid-row: 13/15;
 }
 
 .pictures {
   display: flex;
 }
+
 /*testing*/
 
 img {
   width: 100%;
   height: auto;
 }
+
 button {
   margin: 10px;
   padding: 5px;
@@ -114,42 +184,84 @@ button {
 
 /*Laptop*/
 @media screen and (max-width: 800px) {
-  #summary {
+
+  .title-1,
+  .video,
+  #summary,
+  #characterDesign,
+  .title-2,
+  #secondStoryboard,
+  #summary_two,
+  #characterDesign_two,
+  .title-3,
+  #thirdStoryboard,
+  #summary_three {
     grid-column: 1/9;
+  }
+
+  .title-1 {
+    grid-row: 1;
+    grid-column: 1/9;
+  }
+
+  .video {
     grid-row: 2/3;
+    grid-column: 1/9;
+  }
+
+  #summary {
+    grid-row: 3/4;
+    grid-column: 1/9;
   }
 
   #mainStoryboard {
+    grid-row: 4/5;
     grid-column: 1/9;
-    grid-row: 1/2;
   }
+
   #characterDesign {
+    grid-row: 6/7;
     grid-column: 1/9;
-    grid-row: 3/4;
+  }
+
+  .title-2 {
+    grid-row: 7/8;
+    grid-column: 1/9;
   }
 
   #secondStoryboard {
+    grid-row: 8/9;
     grid-column: 1/9;
-    grid-row: 6/7;
   }
+
   #summary_two {
+    grid-row: 9/10;
     grid-column: 1/9;
-    grid-row: 7/8;
+  }
+
+  #characterDesign_tw {
+    grid-row: 10/11;
+    grid-column: 1/9;
+  }
+
+  .title-3 {
+    grid-row: 12/13;
+    grid-column: 1/9;
   }
 
   #thirdStoryboard {
+    grid-row: 13/14;
     grid-column: 1/9;
-    grid-row: 10/11;
   }
 
   #summary_three {
+    grid-row: 14/15;
     grid-column: 1/9;
-    grid-row: 11/12;
   }
 
-  .pictures {
-    flex-direction: column;
-  }
+
+
+
 }
 
 @media screen and (min-width: 1500px) {
