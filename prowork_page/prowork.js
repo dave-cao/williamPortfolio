@@ -1,11 +1,24 @@
-function checkPassword() {
-  const password = "123"; // Replace with your desired password
-  const input = document.getElementById("passwordInput").value;
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hash = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hash))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
 
-  if (input === password) {
+async function checkPassword() {
+  const password =
+    "7ab0744b8d9357740448ec26ea0fc251a6dafdf507be616842ad292e75d001e6";
+  const input = document.getElementById("passwordInput").value;
+  const hashedInput = await hashPassword(input);
+
+  if (hashedInput === password) {
     document.getElementById("loginForm").classList.add("hidden");
     sessionStorage.setItem("authenticated", "true");
     document.body.style.overflow = "";
+    document.getElementById("mainContent").style.display = "block";
+
     return false;
   } else {
     alert("Incorrect password. Please try again.");
@@ -16,8 +29,10 @@ function checkPassword() {
 // Check if the user has already entered the correct password
 if (sessionStorage.getItem("authenticated") === "true") {
   document.getElementById("loginForm").classList.add("hidden");
+  document.getElementById("mainContent").style.display = "block";
 } else {
   document.body.style.overflow = "hidden";
+  document.getElementById("mainContent").style.display = "hidden";
 }
 
 // Add this to your existing JavaScript
