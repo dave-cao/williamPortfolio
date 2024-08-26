@@ -26,6 +26,10 @@ html {
   z-index: -2;
 }
 
+body {
+  background-color: var(--secondary);
+}
+
 /* base styles */
 .grid {
   display: grid;
@@ -123,6 +127,9 @@ a {
 .nav_links_container li:nth-child(3) {
   grid-column: 1/9;
 }
+.nav_links_container li:nth-child(4) {
+  grid-column: 1/9;
+}
 
 .contactButton {
   grid-column: 1/9;
@@ -135,7 +142,7 @@ a {
   color: lightskyblue;
 }
 /*responsive nav bar*/
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .navBar {
     position: absolute;
     width: 100%;

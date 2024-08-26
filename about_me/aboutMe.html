@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/baseStyle.css" />
-    <link rel="stylesheet" href="aboutMe.css" />
-  </head>
-  <div id="background"></div>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/baseStyle.css" />
+  <link rel="stylesheet" href="aboutMe.css" />
+</head>
+<div id="background"></div>
+
+<body>
+  <div>
+    <a href="/index.html">
+      <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
+    </a>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <nav class="navBar grid">
+    <ul class="nav_links_container grid">
+      <li class="aboutMeLink">
+        <a href="/about_me/aboutMe.html">About Me</a>
+      </li>
+      <li class="myStoryboardsLink">
+        <a href="/storyboards_page/storyboards.html">Storyboards</a>
+      </li>
+      <li class="myIllustrationsLink">
+        <a href="/illustrations_page/illustrations.html">Illustrations</a>
+      </li>
+      <li class="myProWorkLink">
+        <a href="/prowork_page/prowork.html">Pro Work</a>
+      </li>
+      <li class="contactButton contactMeLink">
+        <a href="/contact_me_page/contactMe.html">Contact Me!</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <h1>About Me</h1>
     <div>
-      <a href="/index.html">
-        <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
-      </a>
+      <!-- <img src="/Assets/Character exploration for Unsettled.jpg" alt="" /> -->
+      <p>
+        William Heng is a Buddhist monk turned storyboard artist.
+        <br />
+        <br />
+        He explored the Buddhist myth and the stories of people from many
+        parts of the world.
+        <br />
+        <br />
+        However, during his childhood, self-expression was very difficult in
+        this conservative and purist way of life and so he left monkhood.
+        <br />
+        <br />
+        He found his love for art again, and now strives to become a great
+        visual storyteller.
+      </p>
     </div>
-    <div class="hamburger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <nav class="navBar grid">
-      <ul class="nav_links_container grid">
-        <li class="aboutMeLink">
-          <a href="/about_me/aboutMe.html">About Me</a>
-        </li>
-        <li class="myStoryboardsLink">
-          <a href="/storyboards_page/storyboards.html">Storyboards</a>
-        </li>
-        <li class="myIllustrationsLink">
-          <a href="/illustrations_page/illustrations.html">Illustrations</a>
-        </li>
-        <li class="contactButton contactMeLink">
-          <a href="/contact_me_page/contactMe.html">Contact Me!</a>
-        </li>
-      </ul>
-    </nav>
+  </section>
 
-    <section>
-      <h1>About Me</h1>
-      <div>
-        <!-- <img src="/Assets/Character exploration for Unsettled.jpg" alt="" /> -->
-        <p>
-          William Heng is a Buddhist monk turned storyboard artist.
-          <br />
-          <br />
-          He explored the Buddhist myth and the stories of people from many
-          parts of the world.
-          <br />
-          <br />
-          However, during his childhood, self-expression was very difficult in
-          this conservative and purist way of life and so he left monkhood.
-          <br />
-          <br />
-          He found his love for art again, and now strives to become a great
-          visual storyteller.
-        </p>
-      </div>
-    </section>
+  <script src="/main.js" async defer></script>
+  <script src="/lib/navbar.js" async defer></script>
+</body>
 
-    <script src="/main.js" async defer></script>
-  </body>
 </html>

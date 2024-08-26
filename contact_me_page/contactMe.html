@@ -1,99 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/baseStyle.css" />
-    <link rel="stylesheet" href="contactMe.css" />
-  </head>
-  <div id="background"></div>
-  <body>
-    <div>
-      <a href="/index.html">
-        <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
-      </a>
-    </div>
-    <div class="hamburger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <nav class="navBar grid">
-      <ul class="nav_links_container grid">
-        <li class="aboutMeLink">
-          <a href="/about_me/aboutMe.html">About Me</a>
-        </li>
-        <li class="myStoryboardsLink">
-          <a href="/storyboards_page/storyboards.html">Storyboards</a>
-        </li>
-        <li class="myIllustrationsLink">
-          <a href="/illustrations_page/illustrations.html">Illustrations</a>
-        </li>
-        <li class="contactButton contactMeLink">
-          <a href="/contact_me_page/contactMe.html">Contact Me!</a>
-        </li>
-      </ul>
-    </nav>
 
-    <section>
-      <div class="contactWords">
-        <h1>CONTACT</h1>
-        <p>william.a.heng@gmail.com</p>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/baseStyle.css" />
+  <link rel="stylesheet" href="contactMe.css" />
+</head>
+<div id="background"></div>
+
+<body>
+  <div>
+    <a href="/index.html">
+      <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
+    </a>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <nav class="navBar grid">
+    <ul class="nav_links_container grid">
+      <li class="aboutMeLink">
+        <a href="/about_me/aboutMe.html">About Me</a>
+      </li>
+      <li class="myStoryboardsLink">
+        <a href="/storyboards_page/storyboards.html">Storyboards</a>
+      </li>
+      <li class="myIllustrationsLink">
+        <a href="/illustrations_page/illustrations.html">Illustrations</a>
+      </li>
+      <li class="myProWorkLink">
+        <a href="/prowork_page/prowork.html">Pro Work</a>
+      </li>
+      <li class="contactButton contactMeLink">
+        <a href="/contact_me_page/contactMe.html">Contact Me!</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="contactWords">
+      <h1>CONTACT</h1>
+      <p>william.a.heng@gmail.com</p>
+    </div>
+    <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/william.a.heng@gmail.com">
+      <div>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="user_name" placeholder="Full Name" />
       </div>
-      <form
-        name="myForm"
-        class="formContainer"
-        method="POST"
-        action="https://formsubmit.co/william.a.heng@gmail.com"
-      >
-        <div>
-          <label for="fullName">Full Name</label>
-          <input
-            type="text"
-            id="fullName"
-            name="user_name"
-            placeholder="Full Name"
-          />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="user_email"
-            placeholder="Email"
-          />
-        </div>
-        <div>
-          <label for="comments">Comments</label>
-          <textarea
-            name="user_comments"
-            id="comments"
-            cols="40"
-            rows="5"
-            placeholder="Write a comment here"
-          ></textarea>
-        </div>
-        <!--Configurations-->
-        <div>
-          <input type="hidden" name="_captcha" value="false" />
-        </div>
-        <div class="errorMessage"></div>
-        <div class="submitButton">
-          <input
-            type="submit"
-            value="Submit"
-            formtarget="_blank"
-            id="submitButton"
-            onclick="return validateForm()"
-          />
-        </div>
-      </form>
-    </section>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="user_email" placeholder="Email" />
+      </div>
+      <div>
+        <label for="comments">Comments</label>
+        <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Write a comment here"></textarea>
+      </div>
+      <!--Configurations-->
+      <div>
+        <input type="hidden" name="_captcha" value="false" />
+      </div>
+      <div class="errorMessage"></div>
+      <div class="submitButton">
+        <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="return validateForm()" />
+      </div>
+    </form>
+  </section>
 
-    <script src="/main.js" async defer></script>
-  </body>
+  <script src="/main.js" async defer></script>
+  <script src="/contact_me_page/contactMe.js" async defer></script>
+  <script src="/lib/navbar.js" async defer></script>
+</body>
+
 </html>

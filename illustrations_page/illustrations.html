@@ -5,64 +5,191 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="" />
+    <meta name="description" content="Illustrations by William Heng" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/baseStyle.css" />
     <link rel="stylesheet" href="illustrations.css" />
 </head>
 <div id="background"></div>
 
 <body>
-    <div>
-        <a href="/index.html">
-            <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
-        </a>
-    </div>
-    <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-    <nav class="navBar grid">
-        <ul class="nav_links_container grid">
-            <li class="aboutMeLink">
-                <a href="/about_me/aboutMe.html">About Me</a>
-            </li>
-            <li class="myStoryboardsLink">
-                <a href="/storyboards_page/storyboards.html">Storyboards</a>
-            </li>
-            <li class="myIllustrationsLink">
-                <a href="/illustrations_page/illustrations.html">Illustrations</a>
-            </li>
-            <li class="contactButton contactMeLink">
-                <a href="/contact_me_page/contactMe.html">Contact Me!</a>
-            </li>
-        </ul>
-    </nav>
-
-    <section>
-        <h1>Illustrations</h1>
-        <div id="imgContainer">
-            <img src="../Assets/Illustrations/Gloria_4.0.jpg" alt="A portrait of a naked lady" />
-            <img src="/Assets/Illustrations/nakedLady.png" alt="A portrait of a naked lady" />
-            <img src="/Assets/Illustrations/demonCleaver.JPG" alt="" />
-            <img src="/Assets/Illustrations/arcane_stuff_1.2.jpg" alt="" />
-            <img src="/Assets/Illustrations/Felix_and_maria.jpg" alt="" />
-            <img src="/Assets/Dynamic_sketch_week_8.jpg" alt="" />
-            <img src="/Assets/Perspective_D_week_7.2.jpg" alt="" />
-            <img src="/Assets/Persective_D_week_8.3.jpg" alt="" />
-            <img src="/Assets/Character exploration for Unsettled.jpg" alt="" />
-            <img src="/Assets/Illustrations/perspective_D_week_3.jpg" alt="Created in CGMA's perspective drawing class" />
-            <img src="/Assets/Illustrations/train.JPG" alt="" />
-            <img src="/Assets/Illustrations/person_one.jpg" alt="" />
-            <img src="/Assets/Illustrations/person_two.jpg" alt="" />
-            <img src="/Assets/Illustrations/person_three.jpg" alt="" />
-            <img src="/Assets/Illustrations/person_four.jpg" alt="" />
+    <div class="container-fluid">
+        <!-- NAV BAR -->
+        <div>
+            <a href="/index.html">
+                <h1 class="name" onclick="clickMyName()">WILLIAM HENG</h1>
+            </a>
         </div>
-    </section>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="navBar grid">
+            <ul class="nav_links_container grid">
+                <li class="aboutMeLink">
+                    <a href="/about_me/aboutMe.html">About Me</a>
+                </li>
+                <li class="myStoryboardsLink">
+                    <a href="/storyboards_page/storyboards.html">Storyboards</a>
+                </li>
+                <li class="myIllustrationsLink">
+                    <a href="/illustrations_page/illustrations.html">Illustrations</a>
+                </li>
+                <li class="myProWorkLink">
+                    <a href="/prowork_page/prowork.html">Pro Work</a>
+                </li>
+                <li class="contactButton contactMeLink">
+                    <a href="/contact_me_page/contactMe.html">Contact Me!</a>
+                </li>
+            </ul>
+        </nav>
 
+        <!-- Page Content (Illustrations) -->
+        <section>
+            <h1 class="text-center mb-4">Illustrations</h1>
+            <div class="row g-4 gallery" id="imgContainer">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="../Assets/Illustrations/Gloria_4.0.jpg" data-caption="Gloria" class="d-block text-center">
+                        <img src="../Assets/Illustrations/Gloria_4.0.jpg" alt="Gloria"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/nakedLady.png" data-caption="Portrait of a naked lady"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/nakedLady.png" alt="Portrait of a naked lady"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/demonCleaver.JPG" data-caption="Demon Cleaver"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/demonCleaver.JPG" alt="Demon Cleaver"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/arcane_stuff_1.2.jpg" data-caption="Arcane stuff"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/arcane_stuff_1.2.jpg" alt="Arcane stuff"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/Felix_and_maria.jpg" data-caption="Felix and Maria"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/Felix_and_maria.jpg" alt="Felix and Maria"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Dynamic_sketch_week_8.jpg" data-caption="Dynamic sketch week 8"
+                        class="d-block text-center">
+                        <img src="/Assets/Dynamic_sketch_week_8.jpg" alt="Dynamic sketch week 8"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Perspective_D_week_7.2.jpg" data-caption="Perspective D week 7"
+                        class="d-block text-center">
+                        <img src="/Assets/Perspective_D_week_7.2.jpg" alt="Perspective D week 7"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Persective_D_week_8.3.jpg" data-caption="Perspective D week 8"
+                        class="d-block text-center">
+                        <img src="/Assets/Persective_D_week_8.3.jpg" alt="Perspective D week 8"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Character exploration for Unsettled.jpg"
+                        data-caption="Character exploration for Unsettled" class="d-block text-center">
+                        <img src="/Assets/Character exploration for Unsettled.jpg"
+                            alt="Character exploration for Unsettled"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/perspective_D_week_3.jpg" data-caption="Persective D week 3"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/perspective_D_week_3.jpg" alt="Perspective D week 3"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/train.JPG" data-caption="Train" class="d-block text-center">
+                        <img src="/Assets/Illustrations/train.JPG" alt="Train"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/person_one.jpg" data-caption="Person One"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/person_one.jpg" alt="Person One"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/person_two.jpg" data-caption="Person Two"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/person_two.jpg" alt="Person Two"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/person_three.jpg" data-caption="Person Three"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/person_three.jpg" alt="Person Three"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="/Assets/Illustrations/person_four.jpg" data-caption="Person Four"
+                        class="d-block text-center">
+                        <img src="/Assets/Illustrations/person_four.jpg" alt="Person Four"
+                            class="img-fluid rounded shadow border-2 p-1 hover-shadow bg-black" />
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <!-- External JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.gallery');
+    </script>
+
+    <!-- Custom JS -->
     <script src="/main.js" async defer></script>
     <script src="/illustrations_page/illustrations.js" async defer></script>
+    <script src="/lib/navbar.js" async defer></script>
 </body>
 
 </html>
