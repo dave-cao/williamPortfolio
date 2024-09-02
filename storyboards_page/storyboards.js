@@ -378,7 +378,7 @@ const unsettledArray = [
   "unsettled/pg-182.jpg",
 ];
 
-unsettledWideArray = [
+const unsettledWideArray = [
   "Unsettled_wide/pg-02.jpg",
   "Unsettled_wide/pg-03.jpg",
   "Unsettled_wide/pg-04.jpg",
@@ -397,80 +397,61 @@ unsettledWideArray = [
   "Unsettled_wide/pg-17.jpg",
 ];
 
+// Main functions
+function changeFrame(direction, currentIndex, images, element) {
+  const newIndex = (currentIndex + direction + images.length) % images.length;
+  element.src = images[newIndex];
+  return newIndex;
+}
+
+const preloadImages = (images) => {
+  images.length.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+/////////////////////////////////////////////
+
 //main storyboard
 let unsettledIncrement = 0;
-const unsettledFunction = () => {
-  if (unsettledIncrement >= unsettledArray.length - 1) {
-    unsettledIncrement = -1;
-  }
-  unsettledIncrement++;
-  document.querySelector("#unsettledStoryboard").src =
-    unsettledArray[unsettledIncrement];
-};
-const unsettledPrevious = () => {
-  if (unsettledIncrement <= 0) {
-    unsettledIncrement = unsettledArray.length;
-  }
-  unsettledIncrement--;
-  document.querySelector("#unsettledStoryboard").src =
-    unsettledArray[unsettledIncrement];
+const unsettled = document.querySelector("#unsettledStoryboard");
+const unsettledFunction = (direction) => {
+  unsettledIncrement = changeFrame(
+    direction,
+    unsettledIncrement,
+    unsettledArray,
+    unsettled
+  );
 };
 
 //main WIDE storyboard
 let unsettledWideIncrement = 0;
-const unsettledWideFunction = () => {
-  if (unsettledWideIncrement >= unsettledWideArray.length - 1) {
-    unsettledWideIncrement = -1;
-  }
-  unsettledWideIncrement++;
-  document.querySelector("#unsettledWideStoryboard").src =
-    unsettledWideArray[unsettledWideIncrement];
-};
-const unsettledWidePrevious = () => {
-  if (unsettledWideIncrement <= 0) {
-    unsettledWideIncrement = unsettledWideArray.length;
-  }
-  unsettledWideIncrement--;
-  document.querySelector("#unsettledWideStoryboard").src =
-    unsettledWideArray[unsettledWideIncrement];
-};
-
-//second storyboard
-let codeStoryboardIncrement = 0;
-const codeStoryboardFunction = () => {
-  if (codeStoryboardIncrement >= codeStoryboardArray.length - 1) {
-    codeStoryboardIncrement = -1;
-  }
-  codeStoryboardIncrement++;
-  document.querySelector("#codeStoryboard").src =
-    codeStoryboardArray[codeStoryboardIncrement];
-};
-
-const codePrevious = () => {
-  if (codeStoryboardIncrement <= 0) {
-    codeStoryboardIncrement = codeStoryboardArray.length;
-  }
-  codeStoryboardIncrement--;
-  document.querySelector("#codeStoryboard").src =
-    codeStoryboardArray[codeStoryboardIncrement];
+const unsettledWide = document.querySelector("#unsettledWideStoryboard");
+const unsettledWideFunction = (direction) => {
+  unsettledWideIncrement = changeFrame(
+    direction,
+    unsettledWideIncrement,
+    unsettledWideArray,
+    unsettledWide
+  );
 };
 
 //third storyboard
-let felixComedyIncrement = 0;
-const felixComedyFunction = () => {
-  if (felixComedyIncrement === felixComedyArray.length - 1) {
-    felixComedyIncrement = -1;
-  }
-  felixComedyIncrement++;
-  document.querySelector("#felixStoryboard").src =
-    felixComedyArray[felixComedyIncrement];
+let codeStoryboardIncrement = 0;
+const codeStoryBoard = document.querySelector("#codeStoryboard");
+const codeStoryboardFunction = (direction) => {
+  codeStoryboardIncrement = changeFrame(
+    direction,
+    codeStoryboardIncrement,
+    codeStoryboardArray,
+    codeStoryBoard
+  );
 };
 
-const felixPrevious = () => {
-  if (felixComedyIncrement <= 0) {
-    felixComedyIncrement = felixComedyArray.length;
-  }
-  felixComedyIncrement--;
-  document.querySelector("#felixStoryboard").src =
-    felixComedyArray[felixComedyIncrement];
+const initializePage = () => {
+  preloadImages(codeStoryboardArray);
+  preloadImages(unsettledArray);
+  preloadImages(unsettledWideArray);
 };
+
+initializePage();
